@@ -3,7 +3,7 @@
         <Header></Header>
         <h1 class="p-4 pb-0 w-100 text-center">Welcome {{ admin.username }}</h1>
         <section class="p-4 row d-flex justify-content-between flex-wrap">
-            <div class="table-responsive col-6">
+            <div class="table-responsive col-12 col-lg-6">
                 <form class="w-100 mb-2 d-flex flex-column align-items-center justify-content-center" role="search">
                     <h2>Students</h2>
                     <div class="input-group input-group-sm w-50">
@@ -53,7 +53,7 @@
                 <PaginationButtons :itemsPerPage="itemsPerPage" :currentPage="currentPageStudents"
                     :pageCount="pageCountStudents" :updateCurrentPage="updateCurrentPageStudents"></PaginationButtons>
             </div>
-            <div class="table-responsive col-6">
+            <div class="table-responsive col-12 col-lg-6">
                 <form class="w-100 mb-2 d-flex flex-column align-items-center justify-content-center" role="search">
                     <h2>Archived students</h2>
                     <div class="input-group input-group-sm w-50">
