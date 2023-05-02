@@ -58,18 +58,16 @@ export default {
             }
         },
         verifyAdmin() {
-            for (const admin of storedAdmins) {
-                if (admin.username == this.username && admin.password == this.password) {
-                    let sessionAdminData = { username: this.username, password: this.password }
-                    sessionStorage.setItem("admin", JSON.stringify(sessionAdminData))
-                    this.$router.push({ name: "Home" })
-                    break
-                } else {
-                    this.incorrectValue = true
-                    setTimeout(() => {
-                        this.incorrectValue = false
-                    }, 7000)
-                }
+            const index = storedAdmins.findIndex((admin)=>admin.username === this.username && admin.password === this.password)
+            if(index !== -1){
+                let sessionAdminData = { username: this.username, password: this.password }
+                sessionStorage.setItem("admin", JSON.stringify(sessionAdminData))
+                this.$router.push({ name: "Home" })
+            } else {
+                this.incorrectValue = true
+                setTimeout(() => {
+                    this.incorrectValue = false
+                }, 7000)
             }
         }
     }
