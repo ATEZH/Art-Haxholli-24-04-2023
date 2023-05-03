@@ -3,7 +3,6 @@ import Login from '../views/Login.vue'
 import Home from '../views/Home.vue'
 import Students from '../views/Students.vue'
 import Archive from '../views/Archive.vue'
-import Help from '../views/Help.vue'
 
 const routes = [
   {
@@ -34,14 +33,6 @@ const routes = [
     path: '/archive',
     name: 'Archive',
     component: Archive,
-    meta: {
-      requiresAuth: true
-    }
-  },
-  {
-    path: '/help',
-    name: 'Help',
-    component: Help,
     meta: {
       requiresAuth: true
     }
